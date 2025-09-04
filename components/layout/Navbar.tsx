@@ -44,30 +44,25 @@ export function Navbar({ user }: NavbarProps) {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-1">
               <Link
-                href="/dashboard"
-                className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all"
-              >
-                Dashboard
-              </Link>
-              <Link
-                href="/projects"
+                href="/components"
                 className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all flex items-center gap-2"
               >
-                Projects
-                <span className="px-1.5 py-0.5 text-xs bg-blue-500/20 text-blue-400 rounded-full">3</span>
+                컴포넌트
+                <span className="px-1.5 py-0.5 text-xs bg-blue-500/20 text-blue-400 rounded-full">12</span>
               </Link>
               <Link
-                href="/tasks"
-                className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all flex items-center gap-2"
-              >
-                Tasks
-                <span className="px-1.5 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded-full">12</span>
-              </Link>
-              <Link
-                href="/reports"
+                href="/demo"
                 className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all"
               >
-                Reports
+                데모
+              </Link>
+              <Link
+                href="https://github.com/dokbun2/uibest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all"
+              >
+                GitHub
               </Link>
             </nav>
           </div>
@@ -163,30 +158,28 @@ export function Navbar({ user }: NavbarProps) {
           <div className="md:hidden border-t border-zinc-800/50 py-4">
             <nav className="flex flex-col gap-1">
               <Link
-                href="/dashboard"
-                className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all"
-              >
-                Dashboard
-              </Link>
-              <Link
-                href="/projects"
+                href="/components"
                 className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all flex items-center justify-between"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                Projects
-                <span className="px-1.5 py-0.5 text-xs bg-blue-500/20 text-blue-400 rounded-full">3</span>
+                컴포넌트
+                <span className="px-1.5 py-0.5 text-xs bg-blue-500/20 text-blue-400 rounded-full">12</span>
               </Link>
               <Link
-                href="/tasks"
-                className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all flex items-center justify-between"
-              >
-                Tasks
-                <span className="px-1.5 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded-full">12</span>
-              </Link>
-              <Link
-                href="/reports"
+                href="/demo"
                 className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                Reports
+                데모
+              </Link>
+              <Link
+                href="https://github.com/dokbun2/uibest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                GitHub
               </Link>
             </nav>
           </div>
