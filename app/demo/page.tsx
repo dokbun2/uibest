@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Card, CardContent, CardFooter } from '@/components/ui/Card'
@@ -18,6 +19,7 @@ import {
   Lock,
   MapPin,
   CreditCard,
+  ArrowLeft,
 } from 'lucide-react'
 
 export default function DemoPage() {
@@ -27,6 +29,16 @@ export default function DemoPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-dark-bg-primary to-dark-bg-secondary">
       <div className="container mx-auto px-4 py-16">
+        {/* Back to Home Button */}
+        <div className="mb-8">
+          <Link href="/">
+            <Button variant="ghost" size="sm" className="gap-2 text-zinc-400 hover:text-white">
+              <ArrowLeft className="w-4 h-4" />
+              홈으로
+            </Button>
+          </Link>
+        </div>
+        
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-5xl font-bold text-white">
             UI 컴포넌트 데모

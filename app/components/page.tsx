@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Card, CardContent } from '@/components/ui/Card'
@@ -14,7 +15,7 @@ import { Switch } from '@/components/ui/Switch'
 import { Checkbox, CheckboxGroup } from '@/components/ui/Checkbox'
 import { 
   Mail, User, Lock, Phone, Bell, Settings, Home, 
-  FileText, Briefcase, Calendar 
+  FileText, Briefcase, Calendar, ArrowLeft
 } from 'lucide-react'
 
 export default function ComponentsPage() {
@@ -77,6 +78,15 @@ export default function ComponentsPage() {
   return (
     <main className="min-h-screen bg-black">
       <div className="max-w-7xl mx-auto px-6 py-16">
+        {/* Back to Home Button */}
+        <div className="mb-8">
+          <Link href="/">
+            <Button variant="ghost" size="sm" className="gap-2 text-zinc-400 hover:text-white">
+              <ArrowLeft className="w-4 h-4" />
+              홈으로
+            </Button>
+          </Link>
+        </div>
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-4">
