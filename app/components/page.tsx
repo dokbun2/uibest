@@ -315,26 +315,26 @@ export default function ComponentsPage() {
                 label="동의합니다"
                 helperText="서비스 약관에 동의합니다"
                 checked={checkbox2}
-                onCheckedChange={setCheckbox2}
+                onCheckedChange={(checked) => setCheckbox2(checked as boolean)}
               />
               <Checkbox
                 variant="warning"
                 label="중요 알림"
                 checked={checkbox3}
-                onCheckedChange={setCheckbox3}
+                onCheckedChange={(checked) => setCheckbox3(checked as boolean)}
               />
               <Checkbox
                 variant="danger"
                 label="비활성화 예시"
                 checked={checkbox4}
-                onCheckedChange={setCheckbox4}
+                onCheckedChange={(checked) => setCheckbox4(checked as boolean)}
                 disabled
               />
               <Checkbox
                 label="Indeterminate 상태"
                 checked={checkbox5}
                 indeterminate={!checkbox5 && checkboxValue && checkbox2}
-                onCheckedChange={setCheckbox5}
+                onCheckedChange={(checked) => setCheckbox5(checked as boolean)}
               />
             </div>
 
@@ -344,7 +344,7 @@ export default function ComponentsPage() {
                 options={checkboxOptions}
                 value={multiCheckboxValues}
                 onChange={setMultiCheckboxValues}
-                variant="primary"
+                variant="default"
               />
             </div>
           </div>

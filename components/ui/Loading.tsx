@@ -32,7 +32,7 @@ const spinnerVariants = cva(
 )
 
 export interface SpinnerProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'>,
     VariantProps<typeof spinnerVariants> {
   label?: string
 }
@@ -102,7 +102,7 @@ const dotSizeVariants = cva(
 )
 
 export interface DotsLoadingProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'color'>,
     VariantProps<typeof dotsVariants> {}
 
 export const DotsLoading = forwardRef<HTMLDivElement, DotsLoadingProps>(
